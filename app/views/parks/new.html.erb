@@ -1,0 +1,24 @@
+<h1>Add a new Park</h1>
+
+<%= form_for @parks do |f| %>
+
+<p>Name	<%= f.text_field :name %></p>
+
+<p>Street	<%= f.text_field :street %></p>
+
+<p>City	<%= f.text_field :city %></p>
+
+<p>State	<%= f.text_field :state %></p>
+
+<p>Zip code	<%= f.text_field :zip %></p>
+
+<p>Nets	<%= f.text_field :nets %></p>
+
+<p>Opening Time	<%= f.text_field :opening_time %></p>
+
+<p>Closing Time	<%= f.text_field :closing_time %></p>
+
+
+<%= submit_tag "Add"%>
+
+<% end %>

@@ -1,0 +1,15 @@
+
+<%= bootstrap_form_for(@parks, layout: :horizontal) do |t| %>
+			<p><%= t.text_field :name %></p>
+			<p><%= t.text_field :street %></p>
+			<p><%= t.text_field :city %></p>
+			<p><%= t.text_field :state %></p>
+			<p><%= t.text_field :zip %></p>
+			<p><%= t.text_field :nets %></p>
+			<p><%= t.text_field :opening_time %></p>
+			<p><%= t.text_field :closing_time %></p>
+
+		<div class="text-center">
+				<%= submit_tag "Confirm" %>
+		</div>
+		<% end %>

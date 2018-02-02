@@ -1,0 +1,19 @@
+<h1>Add a new Player</h1>
+
+<%= form_for @players do |f| %>
+
+<p>First Name	<%= f.text_field :first_name %></p>
+
+<p>Last name 	<%= f.text_field :last_name %></p>
+
+<p>Position	<%= f.text_field :position %></p>
+
+<p>Favorite Team	<%= f.text_field :favorite_team %></p>
+
+<p>Extra Equipment	<%= f.text_field :extra_equipment %></p>
+
+<p>Bio	<%= f.text_field :bio %></p>
+
+<%= submit_tag "Add"%>
+
+<% end %>
