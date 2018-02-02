@@ -1,0 +1,31 @@
+<div class="container">
+	<div class="text-center">
+		<h1>Pickup</h1>
+	</div>
+
+	 <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Date and time</th>
+        <th>Drinks provided</th>
+      </tr>
+    </thead>
+    <tbody>
+    	<% @pickup.each do |t| %>
+      <tr>
+        <td><%= t.date_time %></td>
+        <td><%= t.drink_provided %></td>
+        <td><%= link_to "Edit pickup", edit_pickup_path(t) %></td>
+        <td><%= link_to "Delete pickup", pickup_path(t), method: :delete, data: {confirm: "Are you sure?"} %><td>
+      </tr>
+       <% end %>
+    </tbody>
+  </table>
+	
+
+</div>
+<div class="container">
+  <div class="text-center">
+<p> <%= link_to "Add a new Pickup", new_pickup_path %> </p>
+</div>
+</div>

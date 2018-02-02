@@ -1,0 +1,8 @@
+
+<%= bootstrap_form_for(@pickup, layout: :horizontal) do |t| %>
+			<p><%= t.text_field :date_time %></p>
+			<p><%= t.text_field :drink_provided %></p>			
+		<div class="text-center">
+				<%= submit_tag "Confirm" %>
+		</div>
+		<% end %>

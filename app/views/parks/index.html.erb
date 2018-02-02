@@ -1,0 +1,43 @@
+<div class="container">
+	<div class="text-center">
+		<h1>Parks</h1>
+	</div>
+
+	 <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Street</th>
+        <th>City</th>
+        <th>State</th>
+        <th>Zip</th>
+        <th>Nets</th>
+        <th>Opening Time</th>
+        <th>Closing Time</th>
+      </tr>
+    </thead>
+    <tbody>
+    	<% @parks.each do |t| %>
+      <tr>
+        <td><%= t.name %></td>
+        <td><%= t.street %></td>
+        <td><%= t.city %></td> 
+        <td><%= t.state %></td> 
+        <td><%= t.zip %></td> 
+        <td><%= t.nets %></td> 
+        <td><%= t.opening_time %></td> 
+        <td><%= t.closing_time %></td> 
+        <td><%= link_to "Edit Park", edit_park_path(t) %></td>
+        <td><%= link_to "Delete Park", park_path(t), method: :delete, data: {confirm: "Are you sure?"} %><td>
+      </tr>
+       <% end %>
+    </tbody>
+  </table>
+	
+
+</div>
+<div class="container">
+  <div class="text-center">
+<p> <%= link_to "Add a new Park", new_park_path %> </p>
+</div>
+</div>
