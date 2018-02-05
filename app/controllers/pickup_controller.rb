@@ -1,11 +1,9 @@
 class PickupController < ApplicationController
 
-		def index
+	def index
 		@pickup = Pickup.all
 		@players = Player.all
 		@parks = Park.all
-
-
 	end
 
 	def show

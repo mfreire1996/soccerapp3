@@ -1,4 +1,4 @@
-<div class="container">
+"<div class="container">
 	<div class="text-center">
 		<h1>Parks</h1>
 	</div>
@@ -41,3 +41,44 @@
 <p> <%= link_to "Add a new Park", new_park_path %> </p>
 </div>
 </div>
+
+
+
+
+
+<h1>Google Maps</h1>
+    <div id="map"></div>
+    <script>
+
+      
+      function initMap(){
+
+        // map options 
+        var options = {
+          zoom:8,
+          center:{lat: 440.7203,lng:-73.8812}
+        }
+
+        // new map 
+        var map = new google.maps.Map(document.getElementById('map'), options);
+
+        // add marker
+        var marker = new google.maps.Marker({
+          position: {
+            lat:40.6782,
+            lng:-73.9442
+          },
+          map:map
+        })
+      }
+
+      setTimeout(initMap, 10)
+
+    </script>
+    <script 
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAGMt_iOISz_BWdQJp0SlJfqoVwV_BHSvM
+">
+
+</script>
+
+
