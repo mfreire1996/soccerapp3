@@ -34,5 +34,6 @@ class PlayersController < ApplicationController
 		redirect_to players_path
 	end
 	
-	
 end
+
+
