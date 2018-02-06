@@ -1,7 +1,21 @@
 <div class="page-header"><h1>Upload Photo</h1></div>
 
 <%= form_for @photo do |f| %>
-  <%= render 'shared/errors', object: @photo %>
+
+  <% if @photo.errors.any? %>
+  <div class="panel panel-warning errors">
+    <div class="panel-heading">
+      <h5><i class="glyphicon glyphicon-exclamation-sign"></i> Found errors while saving</h5>
+    </div>
+
+    <ul class="panel-body">
+      <% @photo.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
+
 
   <div class="form-group">
     <%= f.label :title %>
