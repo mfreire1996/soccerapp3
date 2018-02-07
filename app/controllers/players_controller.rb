@@ -1,36 +1,36 @@
 class PlayersController < ApplicationController
 
 	def index
-		@players = Player.all
+		@player = Player.all
 		@parks = Park.all
 	end
 
 	def new
-		@players = Player.new
+		@player = Player.new
 	end
 
 	def show
-		@players = Player.find(params[:id])
+		@player = Player.find(params[:id])
 	end
 
 	def create
-		@players = Player.create(user_id: params[:player][:user_id], first_name: params[:player][:first_name], last_name: params[:player][:last_name], position: params[:player][:position], favorite_team: params[:player][:favorite_team], extra_equipment: params[:player][:extra_equipment], bio: params[:player][:bio])
+		@player = Player.create(first_name: params[:player][:first_name], last_name: params[:player][:last_name], position: params[:player][:position], favorite_team: params[:player][:favorite_team], extra_equipment: params[:player][:extra_equipment], bio: params[:player][:bio])
 		redirect_to players_path
 	end
 
 	def edit
-		@players = Player.find(params[:id])
+		@player = Player.find(params[:id])
 	end
 
 	def update
-		@players = Player.find(params[:id])
-		@players.update(user_id: params[:player][:user_id], first_name: params[:player][:first_name], last_name: params[:player][:last_name], position: params[:player][:position], favorite_team: params[:player][:favorite_team], extra_equipment: params[:player][:extra_equipment], bio: params[:player][:bio])
+		@player = Player.find(params[:id])
+		@player.update(first_name: params[:player][:first_name], last_name: params[:player][:last_name], position: params[:player][:position], favorite_team: params[:player][:favorite_team], extra_equipment: params[:player][:extra_equipment], bio: params[:player][:bio])
 		redirect_to players_path
 	end
 
 	def destroy
-		@players = Player.find(params[:id])
-		@players.destroy
+		@player = Player.find(params[:id])
+		@player.destroy
 		redirect_to players_path
 	end
 	
