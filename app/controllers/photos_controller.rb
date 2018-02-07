@@ -4,6 +4,10 @@ def index
     @photos = Photo.order('created_at')
   end
 
+  def show 
+    @photos = Photo.find(params[:id]) 
+  end 
+
   def new
     @photo = Photo.new
   end

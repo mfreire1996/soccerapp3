@@ -3,6 +3,7 @@ Rails.application.routes.draw do
 
   root to: 'photos#index'
   root "players#index"
+  
 
   resources :photos, only: [:new, :create, :index, :destroy]
   resources :players

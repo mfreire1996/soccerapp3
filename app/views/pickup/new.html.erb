@@ -1,10 +1,10 @@
 <h1>Add a new Pickup Game</h1>
 
-<%= form_for @pickup do |f| %>
+<%= form_for @pickup, url: '/pickup' do |f| %>
 
-<p>Date Time	<%= f.text_field :date_time %></p>
+<p>Date Time <%= f.text_field :date_time %></p>
 
-<p>Drinks Provided	<%= f.text_field :drink_provided %></p>
+<p>Drinks Provided <%= f.text_field :drink_provided %></p>
 
 <%= submit_tag "Add"%>
 
