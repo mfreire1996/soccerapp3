@@ -16,7 +16,7 @@ class PickupController < ApplicationController
 
 	def create
 		@pickup = Pickup.create(creator_id: params[:pickup][:creator_id], date_time: params[:pickup][:date_time], drink_provided: params[:pickup][:drink_provided])
-		redirect_to pickup_path
+		redirect_to root_path
 	end
 
 	def edit
