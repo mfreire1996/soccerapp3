@@ -48,15 +48,17 @@
 
 <h1>Google Maps</h1>
     <div id="map"></div>
-    <script>
 
-      
-      function initMap(){
+<script 
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAGMt_iOISz_BWdQJp0SlJfqoVwV_BHSvM">
+</script>
+<script type="text/javascript">
+  function initMap(){
 
         // map options 
         var options = {
           zoom:8,
-          center:{lat: 440.7203,lng:-73.8812}
+          center:{lat: 40.7828650,lng:-73.96535502}
         }
 
         // new map 
@@ -64,19 +66,16 @@
 
         // add marker
         var marker = new google.maps.Marker({
-          position: {
-            lat:40.6782,
-            lng:-73.9442
-          },
+          position: {lat: 40.7828650,lng:-73.96535502},
           map:map
         })
       }
 
-      setTimeout(initMap, 10)
 
-    </script>
-    <script 
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAGMt_iOISz_BWdQJp0SlJfqoVwV_BHSvM">
 
+
+
+
+      setTimeout(initMap, 1000)
 </script>
 
