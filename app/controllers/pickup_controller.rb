@@ -15,7 +15,7 @@ class PickupController < ApplicationController
 	end
 
 	def create
-		@pickup = Pickup.create(creator_id: params[:pickup][:creator_id], date_time: params[:pickup][:date_time], drink_provided: params[:pickup][:drink_provided])
+		@pickup = Pickup.create(creator_id: params[:pickup][:creator_id], park_id: params[:pickup][:park_id], date_time: params[:pickup][:date_time], drink_provided: params[:pickup][:drink_provided])
 		redirect_to root_path
 	end
 
@@ -25,7 +25,7 @@ class PickupController < ApplicationController
 
 	def update
 		@pickup = Pickup.find(params[:id])
-		@pickup.update(creator_id: params[:pickup][:creator_id], date_time: params[:pickup][:date_time], drink_provided: params[:pickup][:drink_provided])
+		@pickup.update(creator_id: params[:pickup][:creator_id], park_id: params[:pickup][:park_id], date_time: params[:pickup][:date_time], drink_provided: params[:pickup][:drink_provided])
 		redirect_to pickup_path
 	end
 

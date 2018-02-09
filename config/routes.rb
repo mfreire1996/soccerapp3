@@ -12,5 +12,6 @@ Rails.application.routes.draw do
   resources :parks
   resources :player_pickup
   resources :pickup
+  resources :home
 
 end

@@ -15,6 +15,8 @@
       <tr>
         <td><%= t.date_time %></td>
         <td><%= t.drink_provided %></td>
+        <td><%= t.creator_id %></td>
+        <td><%= t.park_id %></td>
         <td><%= link_to "Edit pickup", edit_pickup_path(t) %></td>
         <td><%= link_to "Delete pickup", pickup_path(t), method: :delete, data: {confirm: "Are you sure?"} %><td>
       </tr>
